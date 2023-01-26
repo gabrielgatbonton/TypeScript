@@ -21,7 +21,7 @@ console.log(isValid);
 
 let empList : string[];
 
-empList = ["Gabriel","Gabriel","Gabriel",];
+empList = ["Gabriel","Gabriel1","Gabriel2",];
 
 let numList : Array<number>;
 
@@ -29,6 +29,10 @@ numList = [1,2,3,4];
 
 let results = numList.filter((num) => num > 2);
 let num = numList.find((num) => num === 2);
+let emp = empList.find((emp) => emp === "Gabriel1");
+let sum = numList.reduce((acc,num) => acc+num);
 
 console.log(results);
 console.log(num);
+console.log(emp)
+console.log(sum)
