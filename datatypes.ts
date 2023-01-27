@@ -34,5 +34,13 @@ let sum = numList.reduce((acc,num) => acc+num);
 
 console.log(results);
 console.log(num);
-console.log(emp)
-console.log(sum)
+console.log(emp);
+console.log(sum);
+
+enum Color{
+    Red,
+    Green,
+    Blue,
+};
+
+let c : Color = Color.Blue;
