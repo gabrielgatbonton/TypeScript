@@ -24,3 +24,11 @@ console.log(emp);
 console.log(sum);
 ;
 let c = 2 /* Color.Blue */;
+let swapNumbs;
+function swapNumbers(num1, num2) {
+    return [num2, num1];
+}
+swapNumbs = swapNumbers(10, 20);
+console.log(swapNumbs[0]);
+console.log(swapNumbs[1]);
+console.log(swapNumbs);
