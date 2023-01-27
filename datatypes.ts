@@ -37,7 +37,7 @@ console.log(num);
 console.log(emp);
 console.log(sum);
 
-enum Color{
+const enum Color{
     Red,
     Green,
     Blue,
