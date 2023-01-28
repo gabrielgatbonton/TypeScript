@@ -1,15 +1,27 @@
-class Employee {
+import { Login, User } from "./interface";
+
+interface Address {
+    street: string;
+    city: string;
+    state: string;
+    pin: number;
+}
+
+class Employee implements Login {
     // id!: number; id! = when you don't have a constructor
     // name!: string;
     // address!: string
-    constructor(id: number, name: string, address: string) {
+    constructor(id: number, name: string, address: Address) {
         this.#id = id;
         this.name = name;
         this.address = address;
     }
+    login(): User {
+        return { name: 'Gabriel', id: 0o123, email: '' };
+    }
     #id: number;
     protected name: string;
-    address: string;
+    address: Address;
 
     get empId(): number {
         return this.#id;
@@ -29,7 +41,7 @@ class Employee {
 }
 
 class Manager extends Employee {
-    constructor(id: number, name: string, address: string) {
+    constructor(id: number, name: string, address: Address) {
         super(id, name, address);
     }
     getNameWithAddress(): string {
@@ -37,8 +49,8 @@ class Manager extends Employee {
     }
 }
 
-let gabriel = new Employee(1, "Gabriel", "Angeles City");
-let alfonso = new Manager(2, "Alfonso", "San Fernado City");
+let gabriel = new Employee(1, "Gabriel", { street: "Lao Drive", city: "San Fernando", state: "Philippines", pin: 100 });
+let alfonso = new Manager(2, "Alfonso", { street: "Lao Drive", city: "San Fernando", state: "Philippines", pin: 100 });
 let info = gabriel.getNameWithAddress();
 info = alfonso.getNameWithAddress();
 gabriel.empId = 100;

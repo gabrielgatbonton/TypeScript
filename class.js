@@ -11,6 +11,7 @@ var __classPrivateFieldGet = (this && this.__classPrivateFieldGet) || function (
     return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
 };
 var _Employee_id;
+Object.defineProperty(exports, "__esModule", { value: true });
 class Employee {
     // id!: number; id! = when you don't have a constructor
     // name!: string;
@@ -20,6 +21,9 @@ class Employee {
         __classPrivateFieldSet(this, _Employee_id, id, "f");
         this.name = name;
         this.address = address;
+    }
+    login() {
+        return { name: 'Gabriel', id: 0o123, email: '' };
     }
     get empId() {
         return __classPrivateFieldGet(this, _Employee_id, "f");
@@ -44,8 +48,8 @@ class Manager extends Employee {
         return `${this.name} is a manager and stays at ${this.address}`;
     }
 }
-let gabriel = new Employee(1, "Gabriel", "Angeles City");
-let alfonso = new Manager(2, "Alfonso", "San Fernado City");
+let gabriel = new Employee(1, "Gabriel", { street: "Lao Drive", city: "San Fernando", state: "Philippines", pin: 100 });
+let alfonso = new Manager(2, "Alfonso", { street: "Lao Drive", city: "San Fernando", state: "Philippines", pin: 100 });
 let info = gabriel.getNameWithAddress();
 info = alfonso.getNameWithAddress();
 gabriel.empId = 100;
