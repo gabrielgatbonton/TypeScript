@@ -26,3 +26,10 @@ let numbers = [1, 2, 3, 4, 5];
 console.log(add2(1, 4, ...numbers));
 console.log(add2(1, 4, ...[1, 2, 3, 4, 5]));
 console.log(add2(1, 4, 1, 2, 3, 4, 5));
+
+function getItems<Type>(items: Type[]): Type[] {
+    return new Array<Type>().concat(items);
+}
+
+let concatResult = getItems<number>([1,2,3,4,5]);
+let concatString = getItems<string>(["A","B","C","D","E"]);
