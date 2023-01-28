@@ -57,3 +57,8 @@ swapNumbs = swapNumbers(10,20);
 console.log(swapNumbs[0]);
 console.log(swapNumbs[1]);
 console.log(swapNumbs)
+
+let department
+
+department = '01'
+department = 2
