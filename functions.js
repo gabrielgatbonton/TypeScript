@@ -18,3 +18,4 @@ function add2(num1, num2, ...num3) {
 let numbers = [1, 2, 3, 4, 5];
 console.log(add2(1, 4, ...numbers));
 console.log(add2(1, 4, ...[1, 2, 3, 4, 5]));
+console.log(add2(1, 4, 1, 2, 3, 4, 5));
