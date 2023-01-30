@@ -59,3 +59,4 @@ console.log(gabriel.empId);
 // gabriel.address = "Angeles City"
 console.log(gabriel);
 console.log(info);
+//# sourceMappingURL=class.js.map

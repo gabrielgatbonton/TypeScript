@@ -19,3 +19,4 @@ console.log(user2);
 console.log(restUsers);
 let result = restUsers.filter(user => user.id > 4);
 console.log(result);
+//# sourceMappingURL=interface.js.map

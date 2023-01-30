@@ -35,3 +35,4 @@ console.log(swapNumbs);
 let department;
 department = '01';
 department = 2;
+//# sourceMappingURL=datatypes.js.map
